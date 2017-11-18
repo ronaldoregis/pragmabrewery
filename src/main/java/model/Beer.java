@@ -1,19 +1,19 @@
 package model;
 
-import java.util.Map;
-
-/**
- * Created by Ronaldo Regis on 11/18/2017.
- */
 public enum Beer {
-    Pilsner( -4, -6),
+    PILSNER( -4, -6),
     IPA(-5, -6),
-    Lager(-4, -7),
-    Stout(-6, -8),
-    WheatBeer(-3, -5),
-    PaleAle(-4, -6);
+    LAGER(-4, -7),
+    STOUT(-6, -8),
+    WHEATBEER(-3, -5),
+    PALEALE(-4, -6),
+    EMPTY(Integer.MAX_VALUE, Integer.MIN_VALUE);
 
-    private final int max, min;
+    /**
+     * Created by Ronaldo Regis on 11/18/2017.
+     */
+    private final int max;
+    private final int min;
 
     Beer(int max, int min){
         this.max = max;

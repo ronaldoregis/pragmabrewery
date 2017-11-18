@@ -1,15 +1,16 @@
 package model;
 
-import com.google.gson.Gson;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Ronaldo Regis on 11/18/2017.
  */
 public interface Monitorable {
 
-    ArrayList<Alert> getAlerts();
+    @NotNull
+    List<Alert> getAlerts();
 
     void addContainer(MonitorableContainer monitorableContainer);
 }

@@ -1,6 +1,7 @@
 import model.Beer;
 import model.BeerContainer;
 import model.MonitorableContainer;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class MonitorableContainerTest {
 
     @Before
     public void setUp(){
-        this.classUnderTest = new BeerContainer("001", Beer.Lager, -5);
+        this.classUnderTest = new BeerContainer("001", Beer.LAGER, -5);
     }
 
 
@@ -26,7 +27,7 @@ public class MonitorableContainerTest {
 
     @Test
     public void testGetLoad(){
-        assertEquals(Beer.Lager, classUnderTest.getLoad());
+        assertEquals(Beer.LAGER, classUnderTest.getLoad());
     }
 
     @Test
@@ -38,11 +39,32 @@ public class MonitorableContainerTest {
     public void testMonitorableContainerSetters(){
         this.classUnderTest.setCode("003");
         this.classUnderTest.setTemperature(-4);
-        this.classUnderTest.setLoad(Beer.PaleAle);
+        this.classUnderTest.setLoad(Beer.PALEALE);
 
         assertEquals("003", this.classUnderTest.getCode());
         assertEquals(-4, this.classUnderTest.getTemperature());
-        assertEquals(Beer.PaleAle, this.classUnderTest.getLoad());
+        assertEquals(Beer.PALEALE, this.classUnderTest.getLoad());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCodeNullability() throws Exception{
+        new BeerContainer(null, Beer.PILSNER, -1);
+        Assert.fail();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testSetCodeNullability() throws Exception{
+        this.classUnderTest.setCode(null);
+        Assert.fail();
+    }
+
+    @Test
+    public void testBeerNullability(){
+        MonitorableContainer container = new BeerContainer("001", null, -1);
+        assertEquals(Integer.MAX_VALUE, container.getLoad().getMax());
+
+        container.setLoad(null);
+        assertEquals(Integer.MAX_VALUE, container.getLoad().getMax());
     }
 
 }

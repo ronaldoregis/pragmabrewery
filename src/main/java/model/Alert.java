@@ -1,15 +1,25 @@
 package model;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by Ronaldo Regis on 11/18/2017.
  */
 public class Alert {
 
-    private String containerCode;
-    private int containerTemperature, min, max;
+    private final String containerCode;
+    private final int containerTemperature;
+    private final int min;
+    private final int max;
+
+    private final static String ILLEGAL_CONTAINER_CODE_ARGUMENT = "Container code must be not null.";
 
     public Alert(String containerCode, int containerTemperature, int max, int min){
-        this.containerCode = containerCode;
+        if(containerCode == null){
+            throw new IllegalArgumentException(ILLEGAL_CONTAINER_CODE_ARGUMENT);
+        } else {
+            this.containerCode = containerCode;
+        }
         this.containerTemperature = containerTemperature;
         this.max = max;
         this.min = min;
