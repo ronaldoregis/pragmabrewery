@@ -1,4 +1,4 @@
-package model;
+package LoadMonitoringSystem.model;
 
 public enum Beer {
     PILSNER( -4, -6),

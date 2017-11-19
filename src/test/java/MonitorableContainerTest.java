@@ -1,6 +1,6 @@
-import model.Beer;
-import model.BeerContainer;
-import model.MonitorableContainer;
+import LoadMonitoringSystem.model.Beer;
+import LoadMonitoringSystem.model.BeerContainer;
+import LoadMonitoringSystem.model.MonitorableContainer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

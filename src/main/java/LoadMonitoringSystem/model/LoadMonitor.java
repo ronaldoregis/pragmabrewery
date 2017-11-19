@@ -1,6 +1,4 @@
-package model;
-
-import org.jetbrains.annotations.NotNull;
+package LoadMonitoringSystem.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,14 +8,12 @@ import java.util.List;
  */
 public class LoadMonitor implements Monitorable {
 
-    @NotNull
     private final ArrayList<MonitorableContainer> containers;
 
     public LoadMonitor(){
         this.containers = new ArrayList<MonitorableContainer>();
     }
 
-    @NotNull
     public List<Alert> getAlerts() {
         ArrayList<Alert> alerts = new ArrayList<Alert>();
 

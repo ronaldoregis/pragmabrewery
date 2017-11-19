@@ -1,6 +1,4 @@
-package model;
-
-import org.jetbrains.annotations.NotNull;
+package LoadMonitoringSystem.model;
 
 /**
  * Created by Ronaldo Regis on 11/18/2017.

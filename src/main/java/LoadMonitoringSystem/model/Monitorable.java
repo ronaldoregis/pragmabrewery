@@ -1,6 +1,4 @@
-package model;
-
-import org.jetbrains.annotations.NotNull;
+package LoadMonitoringSystem.model;
 
 import java.util.List;
 
@@ -9,7 +7,6 @@ import java.util.List;
  */
 public interface Monitorable {
 
-    @NotNull
     List<Alert> getAlerts();
 
     void addContainer(MonitorableContainer monitorableContainer);

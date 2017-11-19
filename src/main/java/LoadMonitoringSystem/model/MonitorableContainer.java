@@ -1,4 +1,4 @@
-package model;
+package LoadMonitoringSystem.model;
 
 /**
  * Created by Ronaldo Regis on 11/18/2017.
