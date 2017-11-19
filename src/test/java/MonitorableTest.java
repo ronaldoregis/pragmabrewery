@@ -25,7 +25,7 @@ public class MonitorableTest {
         assertEquals(1, this.classUnderTest.getAlerts().size());
         String expected = "{'containerCode':'002'," +
                 "'currentTemperature':'-2'," +
-                "'optimalTemperatureRange':'"+ Beer.WHEATBEER.getMin() +" to "+ Beer.WHEATBEER.getMax() +"'}";
+                "'optimalTemperatureRange':'"+ Beer.WHEATBEER.getMinOptimalTemperature() +" to "+ Beer.WHEATBEER.getMaxOptimalTemperature() +"'}";
 
         assertEquals(expected, this.classUnderTest.getAlerts().get(0).toString());
     }

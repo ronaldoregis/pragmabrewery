@@ -6,28 +6,28 @@ package LoadMonitoringSystem.model;
 public class BeerContainer implements MonitorableContainer {
 
     private String code;
-    private Beer beer;
+    private Beer load;
     private int temperature;
     private final static String ILLEGAL_CODE_ARGUMENT = "BeerContainer code must be not null.";
 
-    public BeerContainer(String code, Beer beer, int temperature){
+    public BeerContainer(String code, Beer load, int temperature){
         if(code == null){
             throw new IllegalArgumentException(ILLEGAL_CODE_ARGUMENT);
         } else {
             this.code = code;
         }
 
-        if(beer == null){
-            this.beer = Beer.EMPTY;
+        if(load == null){
+            this.load = Beer.EMPTY;
         } else {
-            this.beer = beer;
+            this.load = load;
         }
 
         this.temperature = temperature;
     }
 
     public Beer getLoad() {
-        return this.beer;
+        return this.load;
     }
 
     public int getTemperature() {
@@ -47,11 +47,11 @@ public class BeerContainer implements MonitorableContainer {
 
     }
 
-    public void setLoad(Beer beer){
-        if(beer == null){
-            this.beer = Beer.EMPTY;
+    public void setLoad(Beer load){
+        if(load == null){
+            this.load = Beer.EMPTY;
         } else {
-            this.beer = beer;
+            this.load = load;
         }
     }
 

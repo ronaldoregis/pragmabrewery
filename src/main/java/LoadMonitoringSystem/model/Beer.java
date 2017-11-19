@@ -12,19 +12,19 @@ public enum Beer {
     /**
      * Created by Ronaldo Regis on 11/18/2017.
      */
-    private final int max;
-    private final int min;
+    private final int maxOptimalTemperature;
+    private final int minOptimalTemperature;
 
-    Beer(int max, int min){
-        this.max = max;
-        this.min = min;
+    Beer(int maxOptimalTemperature, int minOptimalTemperature){
+        this.maxOptimalTemperature = maxOptimalTemperature;
+        this.minOptimalTemperature = minOptimalTemperature;
     }
 
-    public int getMax(){
-        return this.max;
+    public int getMaxOptimalTemperature(){
+        return this.maxOptimalTemperature;
     }
 
-    public int getMin(){
-        return this.min;
+    public int getMinOptimalTemperature(){
+        return this.minOptimalTemperature;
     }
 }

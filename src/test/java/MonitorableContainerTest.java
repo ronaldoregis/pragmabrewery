@@ -61,10 +61,10 @@ public class MonitorableContainerTest {
     @Test
     public void testBeerNullability(){
         MonitorableContainer container = new BeerContainer("001", null, -1);
-        assertEquals(Integer.MAX_VALUE, container.getLoad().getMax());
+        assertEquals(Integer.MAX_VALUE, container.getLoad().getMaxOptimalTemperature());
 
         container.setLoad(null);
-        assertEquals(Integer.MAX_VALUE, container.getLoad().getMax());
+        assertEquals(Integer.MAX_VALUE, container.getLoad().getMaxOptimalTemperature());
     }
 
 }

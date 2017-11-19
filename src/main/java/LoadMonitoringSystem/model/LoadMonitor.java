@@ -18,8 +18,8 @@ public class LoadMonitor implements Monitorable {
         ArrayList<Alert> alerts = new ArrayList<Alert>();
 
         for (MonitorableContainer c : this.containers) {
-            if(c.getTemperature() > c.getLoad().getMax() || c.getTemperature() < c.getLoad().getMin()){
-                alerts.add(new Alert(c.getCode(),c.getTemperature(),c.getLoad().getMax(), c.getLoad().getMin()));
+            if(c.getTemperature() > c.getLoad().getMaxOptimalTemperature() || c.getTemperature() < c.getLoad().getMinOptimalTemperature()){
+                alerts.add(new Alert(c.getCode(),c.getTemperature(),c.getLoad().getMaxOptimalTemperature(), c.getLoad().getMinOptimalTemperature()));
             }
         }
         return alerts;
