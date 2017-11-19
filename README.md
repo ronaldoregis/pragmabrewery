@@ -7,7 +7,7 @@ To run the tests: mvn clean test
 
 To build the project: mvn clean package
 
-To run the application: java -cp target/my-app-0.1-SNAPSHOT.jar
+To run the application: java -jar target/PragmaBrewery-0.1-SNAPSHOT.jar
 
 This application does not use database or any external dependency.
 
@@ -33,7 +33,6 @@ Questions to the client and Answers:
 
 Code highlights:
 - Based on components.
-- Use of interfaces.
 - Clean Code.
 - TDD.
 - Simple but easy to maintain and grow!

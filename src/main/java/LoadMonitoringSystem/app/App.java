@@ -1,7 +1,6 @@
 package LoadMonitoringSystem.app;
 
 import LoadMonitoringSystem.model.*;
-import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -16,16 +15,16 @@ public class App {
         loadInitialContainers(monitor);
 
         List<Alert> alerts = monitor.getAlerts();
-        Gson jsonAlerts = new Gson();
+
         //print with only one entry ([{"containerCode":"004","containerTemperature":-5,"min":-8,"max":-6}])
-        System.out.println(jsonAlerts.toJson(alerts));
+        System.out.println(alerts.toString());
 
 
         //add more containers
         loadHighTemperatureContainers(monitor);
         alerts = monitor.getAlerts();
         //print after add containers with high temperature
-        System.out.println(jsonAlerts.toJson(alerts));
+        System.out.println(alerts.toString());
 
     }
 
