@@ -13,9 +13,8 @@ public class BeerContainer implements MonitorableContainer {
     public BeerContainer(String code, Beer load, int temperature){
         if(code == null){
             throw new IllegalArgumentException(ILLEGAL_CODE_ARGUMENT);
-        } else {
-            this.code = code;
         }
+        this.code = code;
 
         if(load == null){
             this.load = Beer.EMPTY;
@@ -41,10 +40,8 @@ public class BeerContainer implements MonitorableContainer {
     public void setCode(String code){
         if(code == null){
             throw new IllegalArgumentException(ILLEGAL_CODE_ARGUMENT);
-        } else {
-            this.code = code;
         }
-
+        this.code = code;
     }
 
     public void setLoad(Beer load){

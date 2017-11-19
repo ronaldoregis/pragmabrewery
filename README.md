@@ -2,7 +2,7 @@
 
 This application is part of a distributed system based on components and has been built using Java 1.8, ItelliJ IDEA and Maven.
 
-##Overview:
+## Overview:
 
 ![Distributed system](systemOverview.png)
 
@@ -12,7 +12,7 @@ This application is part of a distributed system based on components and has bee
 
 To run the tests: `mvn clean test`
 
-To build the project: `mvn clean package`
+To build the project (generate jar): `mvn clean package`
 
 To run the application: `java -jar target/PragmaBrewery-0.1-SNAPSHOT.jar`
 

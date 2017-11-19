@@ -46,26 +46,26 @@ public class App {
         container = new BeerContainer("004", Beer.STOUT, -5);
         monitor.addContainer(container);
 
-        container = new BeerContainer("005", Beer.WHEATBEER, -5);
+        container = new BeerContainer("005", Beer.WHEAT_BEER, -5);
         monitor.addContainer(container);
 
-        container = new BeerContainer("006", Beer.PALEALE, -5);
+        container = new BeerContainer("006", Beer.PALE_ALE, -5);
         monitor.addContainer(container);
     }
 
     private static void loadHighTemperatureContainers(Monitorable monitor){
         MonitorableContainer container;
 
-        container = new BeerContainer("007",Beer.PALEALE, 10 );
+        container = new BeerContainer("007",Beer.PALE_ALE, 10 );
         monitor.addContainer(container);
 
-        container = new BeerContainer("008",Beer.PALEALE, 10 );
+        container = new BeerContainer("008",Beer.PALE_ALE, 10 );
         monitor.addContainer(container);
 
-        container = new BeerContainer("009",Beer.PALEALE, 10 );
+        container = new BeerContainer("009",Beer.PALE_ALE, 10 );
         monitor.addContainer(container);
 
-        container = new BeerContainer("010",Beer.PALEALE, 10 );
+        container = new BeerContainer("010",Beer.PALE_ALE, 10 );
         monitor.addContainer(container);
     }
 }

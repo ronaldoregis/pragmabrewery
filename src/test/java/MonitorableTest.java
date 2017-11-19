@@ -13,7 +13,7 @@ public class MonitorableTest {
 
     @Before
     public void setUp(){
-        MonitorableContainer monitorableContainer = new BeerContainer("002", Beer.WHEATBEER, -2);
+        MonitorableContainer monitorableContainer = new BeerContainer("002", Beer.WHEAT_BEER, -2);
 
         this.classUnderTest = new LoadMonitor();
         this.classUnderTest.addContainer(monitorableContainer);
@@ -25,7 +25,7 @@ public class MonitorableTest {
         assertEquals(1, this.classUnderTest.getAlerts().size());
         String expected = "{'containerCode':'002'," +
                 "'currentTemperature':'-2'," +
-                "'optimalTemperatureRange':'"+ Beer.WHEATBEER.getMinOptimalTemperature() +" to "+ Beer.WHEATBEER.getMaxOptimalTemperature() +"'}";
+                "'optimalTemperatureRange':'"+ Beer.WHEAT_BEER.getMinOptimalTemperature() +" to "+ Beer.WHEAT_BEER.getMaxOptimalTemperature() +"'}";
 
         assertEquals(expected, this.classUnderTest.getAlerts().get(0).toString());
     }

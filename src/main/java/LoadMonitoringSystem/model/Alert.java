@@ -15,9 +15,9 @@ public class Alert {
     public Alert(String containerCode, int containerTemperature, int max, int min){
         if(containerCode == null){
             throw new IllegalArgumentException(ILLEGAL_CONTAINER_CODE_ARGUMENT);
-        } else {
-            this.containerCode = containerCode;
         }
+        this.containerCode = containerCode;
+
         this.containerTemperature = containerTemperature;
         this.max = max;
         this.min = min;

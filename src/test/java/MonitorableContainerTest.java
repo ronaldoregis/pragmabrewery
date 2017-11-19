@@ -39,11 +39,11 @@ public class MonitorableContainerTest {
     public void testMonitorableContainerSetters(){
         this.classUnderTest.setCode("003");
         this.classUnderTest.setTemperature(-4);
-        this.classUnderTest.setLoad(Beer.PALEALE);
+        this.classUnderTest.setLoad(Beer.PALE_ALE);
 
         assertEquals("003", this.classUnderTest.getCode());
         assertEquals(-4, this.classUnderTest.getTemperature());
-        assertEquals(Beer.PALEALE, this.classUnderTest.getLoad());
+        assertEquals(Beer.PALE_ALE, this.classUnderTest.getLoad());
     }
 
     @Test(expected = IllegalArgumentException.class)

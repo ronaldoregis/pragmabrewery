@@ -5,8 +5,8 @@ public enum Beer {
     IPA(-5, -6),
     LAGER(-4, -7),
     STOUT(-6, -8),
-    WHEATBEER(-3, -5),
-    PALEALE(-4, -6),
+    WHEAT_BEER(-3, -5),
+    PALE_ALE(-4, -6),
     EMPTY(Integer.MAX_VALUE, Integer.MIN_VALUE);
 
     /**
