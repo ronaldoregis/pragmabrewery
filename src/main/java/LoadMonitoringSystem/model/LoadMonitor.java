@@ -9,7 +9,7 @@ public class LoadMonitor implements Monitorable {
 
     private final Set<MonitorableContainer> containers;
 
-    private final static String ILLEGAL_CODE_ARGUMENT = "Container code must be not null.";
+    private final static String ILLEGAL_ARGUMENT = "Null parameter not allowed.";
 
     public LoadMonitor(){
         this.containers = new HashSet<MonitorableContainer>();
@@ -27,6 +27,9 @@ public class LoadMonitor implements Monitorable {
     }
 
     public void addContainer(MonitorableContainer container){
+        if(container == null){
+            throw new IllegalArgumentException(ILLEGAL_ARGUMENT);
+        }
         this.containers.add(container);
     }
 

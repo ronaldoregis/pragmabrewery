@@ -3,6 +3,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 /**
  * Created by Ronaldo Regis on 11/18/2017.
@@ -18,6 +20,12 @@ public class MonitorableTest {
         this.classUnderTest = new LoadMonitor();
         this.classUnderTest.addContainer(monitorableContainer);
 
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testAddNullContainer(){
+        this.classUnderTest.addContainer(null);
+        fail();
     }
 
     @Test
