@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by Ronaldo Regis on 11/18/2017.
@@ -65,6 +67,23 @@ public class MonitorableContainerTest {
 
         container.setLoad(null);
         assertEquals(Integer.MAX_VALUE, container.getLoad().getMaxOptimalTemperature());
+    }
+
+    @Test
+    public void testEquals(){
+        MonitorableContainer container1 = new BeerContainer("001", null, 0);
+        MonitorableContainer container2 = new BeerContainer("001", Beer.STOUT, -7);
+        assertTrue(container1.equals(container2));
+
+        MonitorableContainer container3 = new BeerContainer("002", Beer.STOUT, -7);
+        assertFalse(container2.equals(container3));
+    }
+
+    @Test
+    public void testEqualsNullability(){
+        MonitorableContainer container1 = new BeerContainer("001", null, 0);
+        assertFalse(container1.equals(null));
+
     }
 
 }

@@ -10,4 +10,6 @@ public interface Monitorable {
     List<Alert> getAlerts();
 
     void addContainer(MonitorableContainer monitorableContainer);
+    void setContainerTemperature(String containerCode, int temperature);
+    MonitorableContainer getContainer(String containerCode);
 }

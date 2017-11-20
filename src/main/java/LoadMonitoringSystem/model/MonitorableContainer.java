@@ -14,4 +14,8 @@ public interface MonitorableContainer {
     void setLoad(Beer beer);
 
     void setTemperature(int temperature);
+
+    boolean equals(Object object);
+
+    int hashCode();
 }
