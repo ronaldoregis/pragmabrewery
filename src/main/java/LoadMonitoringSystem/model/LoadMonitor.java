@@ -1,17 +1,18 @@
 package LoadMonitoringSystem.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Ronaldo Regis on 11/18/2017.
  */
 public class LoadMonitor implements Monitorable {
 
-    private final ArrayList<MonitorableContainer> containers;
+    private final Set<MonitorableContainer> containers;
+
+    private final static String ILLEGAL_CODE_ARGUMENT = "Container code must be not null.";
 
     public LoadMonitor(){
-        this.containers = new ArrayList<MonitorableContainer>();
+        this.containers = new HashSet<MonitorableContainer>();
     }
 
     public List<Alert> getAlerts() {
@@ -27,5 +28,25 @@ public class LoadMonitor implements Monitorable {
 
     public void addContainer(MonitorableContainer container){
         this.containers.add(container);
+    }
+
+    public void setContainerTemperature(String code, int newTemperature){
+        if(code != null){
+            MonitorableContainer container = getContainer(code);
+            container.setTemperature(newTemperature);
+            this.containers.add(container);
+        }
+    }
+
+    public MonitorableContainer getContainer(String containerCode){
+        if(containerCode == null){
+            return null;
+        }
+        for (MonitorableContainer it : this.containers) {
+            if (it.hashCode() == containerCode.hashCode()) {
+                return it;
+            }
+        }
+        return null;
     }
 }

@@ -6,7 +6,11 @@ This application is part of a distributed system based on components and has bee
 
 ![Distributed system](systemOverview.png)
 
+Component diagram and Class diagram
 ![Class and components diagram](diagram.png)
+
+Use Case diagram
+![use case diagram](useCase.png)
 
 ## How to:
 

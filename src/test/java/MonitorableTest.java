@@ -29,4 +29,22 @@ public class MonitorableTest {
 
         assertEquals(expected, this.classUnderTest.getAlerts().get(0).toString());
     }
+
+    @Test
+    public void testSetContainertemperature(){
+        this.classUnderTest.setContainerTemperature("002", 10);
+        assertEquals(10,this.classUnderTest.getContainer("002").getTemperature());
+        this.classUnderTest.setContainerTemperature("002", 15);
+        assertEquals(15,this.classUnderTest.getContainer("002").getTemperature());
+    }
+
+    @Test
+    public void testGetContainerWithNullParameter(){
+        assertEquals(null,this.classUnderTest.getContainer(null));
+    }
+
+    @Test
+    public void testGetUnknownContainer(){
+        assertEquals(null, this.classUnderTest.getContainer("UnknownContainer"));
+    }
 }
