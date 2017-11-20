@@ -10,14 +10,9 @@ public class Alert {
     private final int min;
     private final int max;
 
-    private final static String ILLEGAL_CONTAINER_CODE_ARGUMENT = "Container code must be not null.";
-
     public Alert(String containerCode, int containerTemperature, int max, int min){
-        if(containerCode == null){
-            throw new IllegalArgumentException(ILLEGAL_CONTAINER_CODE_ARGUMENT);
-        }
-        this.containerCode = containerCode;
 
+        this.containerCode = containerCode;
         this.containerTemperature = containerTemperature;
         this.max = max;
         this.min = min;
